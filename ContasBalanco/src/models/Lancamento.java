@@ -55,6 +55,7 @@ public class Lancamento {
 	}
 	public void calcularBalanco(String tipo)
 	{
+		
 		//mes 1
 		double soma1 = 0,balanco1,somad1= 0;
 		for(int i = 0; i<valor;i++)
@@ -65,8 +66,8 @@ public class Lancamento {
 		{
 			somad1 = somad1+valor;
 		}	
-		balanco1 = soma1+somad1;
-		System.out.printf("Balanco mes : %d",balanco1);
+		balanco1 = soma1-somad1;
+		System.out.printf("Balanco do mes 1 : %.4f",balanco1);
 		
 		//mes 2
 		double soma2= 0,balanco2,somad2= 0;
@@ -78,8 +79,8 @@ public class Lancamento {
 		{
 			somad2 = somad2+valor;
 		}	
-		balanco2 = soma2+somad2;
-		System.out.printf("Balanco mes : %d",balanco2);	
+		balanco2 = soma2-somad2;
+		System.out.printf("Balanco do mes 2 : %.4f",balanco2);	
 		
 		//mes 3
 		double soma3 = 0,balanco3,somad3= 0;
@@ -91,10 +92,15 @@ public class Lancamento {
 	    {
 		   somad3 = somad3+valor;
 	    }	
-		balanco3 = soma3+somad3;
-		System.out.printf("Balanco mes : %d",balanco3);
+		balanco3 = soma3-somad3;
+		System.out.printf("Balanco do mes 3 : %.4f",balanco3);
 		
 		//total
+		double balancoTotal, somaTotal1 = 0, somaTotal2;
+		somaTotal1 = soma1+soma2+soma3;
+		somaTotal2 = somad1+somad2+somad3;
+		balancoTotal = somaTotal1 - somaTotal2;
+		System.out.printf("Balanco Total : %.4f",balancoTotal);	
 		
 	}
 }
