@@ -1,0 +1,276 @@
+	import java.awt.BorderLayout;
+	import java.awt.EventQueue;
+	import javax.swing.JFrame;
+	import javax.swing.JPanel;
+	import javax.swing.border.EmptyBorder;
+	import javax.swing.JLabel;
+	import javax.swing.JOptionPane;
+	import java.awt.Font;
+	import java.awt.event.ActionEvent;
+	import java.awt.event.ActionListener;
+	import java.util.Scanner;
+	import javax.swing.JTextField;
+	import javax.swing.JButton;
+	import javax.swing.JTextArea;
+	import java.awt.Color;
+	import javax.swing.border.LineBorder;
+
+	public class Basico extends JFrame implements ActionListener {
+
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JPanel contentPane;
+		private JPanel panel;
+		private JTextField textField1;
+		private JButton btn_0;
+		private JButton btn_1;
+		private JButton btn_2;
+		private JButton btn_3;
+		private JButton btn_4;
+		private JButton btn_5;
+		private JButton btn_6;
+		private JButton btn_7;
+		private JButton btn_8;
+		private JButton btn_9;
+		private JButton btn_virg;
+	
+		public Basico() {
+			setTitle("Basico");
+			setResizable(false);
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			setBounds(100, 100, 424, 412);
+			contentPane = new JPanel();
+			contentPane.setBackground(new Color(51, 204, 255));
+			setContentPane(contentPane);
+			contentPane.setLayout(null);
+			
+			textField1 = new JTextField();
+			textField1.setFont(new Font("Courier New", Font.PLAIN, 17));
+			textField1.setBounds(15, 65, 387, 45);
+			textField1.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			contentPane.add(textField1);
+			textField1.setColumns(10);
+
+			JButton btn_igual = new JButton("=");
+			btn_igual.setForeground(Color.white);
+			btn_igual.setBackground(new Color(51,153,255));
+			btn_igual.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_igual.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_igual.setBounds(315, 330, 95, 40);
+			contentPane.add(btn_igual);
+			
+			btn_1 = new JButton("1");
+			btn_1.setForeground(Color.white);
+			btn_1.setBackground(new Color(0, 0, 153));
+			btn_1.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_1.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_1.setBounds(22, 290, 95, 40);
+			panel.add(btn_1);
+			btn_1.addActionListener(this);
+			
+			btn_2 = new JButton("2");
+			btn_2.setForeground(Color.white);
+			btn_2.setBackground(new Color(0, 0, 153));
+			btn_2.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_2.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_2.setBounds(117, 290, 95, 40);
+			contentPane.add(btn_2);
+			
+			btn_3 = new JButton("3");
+			btn_3.setForeground(Color.white);
+			btn_3.setBackground(new Color(0, 0, 153));
+			btn_3.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_3.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_3.setBounds(212, 290, 95, 40);
+			contentPane.add(btn_3);
+			
+			btn_4 = new JButton("4");
+			btn_4.setForeground(Color.white);
+			btn_4.setBackground(new Color(0, 0, 153));
+			btn_4.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_4.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_4.setBounds(22, 250, 95, 40);
+			contentPane.add(btn_4);
+			
+			btn_5 = new JButton("5");
+			btn_5.setForeground(Color.white);
+			btn_5.setBackground(new Color(0, 0, 153));
+			btn_5.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_5.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_5.setBounds(117, 250, 95, 40);
+			contentPane.add(btn_5);
+			
+			JButton btn_6 = new JButton("6");
+			btn_6.setForeground(Color.white);
+			btn_6.setBackground(new Color(0, 0, 153));
+			btn_6.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_6.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_6.setBounds(212, 250, 95, 40);
+			contentPane.add(btn_6);
+			
+			JButton btn_7 = new JButton("7");
+			btn_7.setForeground(Color.white);
+			btn_7.setBackground(new Color(0, 0, 153));
+			btn_7.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_7.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_7.setBounds(22, 210, 95, 40);
+			contentPane.add(btn_7);
+			
+			JButton btn_8 = new JButton("8");
+			btn_8.setForeground(Color.white);
+			btn_8.setBackground(new Color(0, 0, 153));
+			btn_8.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_8.setBounds(117, 210, 95, 40);
+			btn_8.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			contentPane.add(btn_8);
+			
+			JButton btn_9 = new JButton("9");
+			btn_9.setForeground(Color.white);
+			btn_9.setBackground(new Color(0, 0, 153));
+			btn_9.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_9.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_9.setBounds(212, 210, 95, 40);
+			contentPane.add(btn_9);
+			
+			JButton btn_0 = new JButton("0");
+			btn_0.setForeground(Color.white);
+			btn_0.setBackground(new Color(0, 0, 153));
+			btn_0.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_0.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_0.setBounds(117, 330, 95, 40);
+			btn_0.addActionListener((ActionListener) this);
+			contentPane.add(btn_0);
+			
+			JButton btn_div = new JButton("÷");
+			btn_div.setForeground(Color.white);
+			btn_div.setBackground(new Color(51,153,255));
+			btn_div.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_div.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_div.setBounds(315, 170, 95, 40);
+			contentPane.add(btn_div);
+			
+			JButton btn_vez = new JButton("X");
+			btn_vez.setForeground(Color.white);
+			btn_vez.setBackground(new Color(51,153,255));
+			btn_vez.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_vez.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_vez.setBounds(315, 210, 95, 40);
+			contentPane.add(btn_vez);
+			
+			JButton btn_menos = new JButton("-");
+			btn_menos.setForeground(Color.white);
+			btn_menos.setBackground(new Color(51,153,255));
+			btn_menos.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_menos.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_menos.setBounds(315, 250, 95, 40);
+			contentPane.add(btn_menos);
+			
+			JButton btn_mais = new JButton("+");
+			btn_mais.setForeground(Color.white);
+			btn_mais.setBackground(new Color(51,153,255));
+			btn_mais.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_mais.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_mais.setBounds(315, 290, 95, 40);
+			contentPane.add(btn_mais);
+			
+			JButton btn_virg = new JButton(",");
+			btn_virg.setForeground(Color.white);
+			btn_virg.setBackground(new Color(51,153,255));
+			btn_virg.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_virg.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_virg.setBounds(212, 330, 95, 40);
+			contentPane.add(btn_virg);
+			
+			JButton btn_por = new JButton("%");
+			btn_por.setForeground(Color.white);
+			btn_por.setBackground(new Color(51,153,255));
+			btn_por.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_por.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_por.setBounds(212,170, 95, 40);
+			contentPane.add(btn_por);
+			
+			JButton btn_ra = new JButton("√x");
+			btn_ra.setForeground(Color.white);
+			btn_ra.setBackground(new Color(51,153,255));
+			btn_ra.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_ra.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_ra.setBounds(117, 170, 95, 40);
+			contentPane.add(btn_ra);
+			
+			JButton btn_pot = new JButton("x²");
+			btn_pot.setForeground(Color.white);
+			btn_pot.setBackground(new Color(51,153,255));
+			btn_pot.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_pot.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_pot.setBounds(22, 170, 95, 40);
+			contentPane.add(btn_pot);
+			
+			JButton btn_apaga = new JButton("<DEL>");
+			btn_apaga.setForeground(Color.white);
+			btn_apaga.setBackground(new Color(51,153,255));
+			btn_apaga.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_apaga.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_apaga.setBounds(22, 330, 95, 40);
+			contentPane.add(btn_apaga);
+			
+			JButton btn_voltar = new JButton("<");
+			btn_voltar.setForeground(Color.white);
+			btn_voltar.setBackground(new Color(51,153,255));
+			btn_voltar.setBorder(new LineBorder(new Color(0, 0, 0), 1));
+			btn_voltar.setFont(new Font("Courier New", Font.BOLD, 17));
+			btn_voltar.setBounds(15,11, 45, 30);
+			contentPane.add(btn_voltar);
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			if (e.getSource() == btn_0) 
+			{
+				textField1.setText("0");
+			}
+			else if(e.getSource() == btn_1) 
+			{
+				textField1.setText("1");
+			}
+			else if(e.getSource() == btn_2) 
+			{
+				textField1.setText("2");
+			}
+			else if(e.getSource() == btn_3) 
+			{
+				textField1.setText("3");
+			}
+			else if(e.getSource() == btn_4) 
+			{
+				textField1.setText("4");
+			}
+			else if(e.getSource() == btn_5) 
+			{
+				textField1.setText("5");
+			}
+			else if(e.getSource() == btn_6) 
+			{
+				textField1.setText("6");
+			}
+			else if(e.getSource() == btn_7) 
+			{
+				textField1.setText("7");
+			}
+			else if(e.getSource() == btn_8) 
+			{
+				textField1.setText("8");
+			}
+			else if(e.getSource() == btn_9) 
+			{
+				textField1.setText("9");
+			}
+			else if(e.getSource() == btn_virg) 
+			{
+				textField1.setText(",");
+			}
+			
+		 }
+	}

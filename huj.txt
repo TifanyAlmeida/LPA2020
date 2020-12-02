@@ -1,0 +1,31 @@
+public class ExemploForm extends JDialog implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel panel;
+	private JTextField tfNum = new JTextField();
+	
+	
+	private JButton btAdd;
+	
+
+	ExemploForm() {
+		
+		tfNum = new JTextField();
+		
+		tfNum.setBounds(10, 30, 50, 25);
+		// Botão Adicionar (CREATE)
+		btAdd = new JButton("Add");
+		btAdd.setBounds(500, 30, 68, 25);
+		panel.add(btAdd);
+		btAdd.addActionListener(this);
+
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btAdd) {
+			tfNum.setText("Pode colocar a string aqui");
+		} 
+	}
+}
