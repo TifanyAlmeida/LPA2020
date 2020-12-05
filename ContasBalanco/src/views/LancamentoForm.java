@@ -4,14 +4,15 @@ package views;
 	import javax.swing.JButton;
 	import javax.swing.JComboBox;
 	import javax.swing.JDialog;
-	import javax.swing.JLabel;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 	import javax.swing.JPanel;
 	import javax.swing.JScrollPane;
 	import javax.swing.JTable;
 	import javax.swing.JTextField;
 	import javax.swing.table.DefaultTableModel;
 
-	public class LancamentoForm extends JDialog implements ActionListener{
+	public class LancamentoForm extends JFrame implements ActionListener{
 		private static final long serialVersionUID = 1L;
 		private JPanel panel;
 		private JComboBox<String> cbConta;
@@ -33,35 +34,28 @@ package views;
 			setLayout(null);
 
 			// Criando o label
-			lbCabecalho = new JLabel("Conta \s\s\s\s\s\s\s  Data	\s	Valor  \s");
+			lbCabecalho = new JLabel("\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s Conta \s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s Data	\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s 	Valor  \s");
 			lbCabecalho.setBounds(10,10,580,20);
 			panel.add(lbCabecalho);
 
 			// Criando TextField
 			cbConta = new JComboBox<String>();
-			cbConta.setBounds(430,30,70,25);
+			cbConta.setBounds(10,30,186,25);
 			panel.add(cbConta);
 
 			tfdata = new JTextField();
-			tfdata.setBounds(50,30,30,25);
+			tfdata.setBounds(196,30,187,25);
 			panel.add(tfdata);
 
 			tfvalor = new JTextField();
-			tfvalor.setBounds(80,30,50,25);
+			tfvalor.setBounds(382,30,120,25);
 			panel.add(tfvalor);
-			
-			cbConta = new JComboBox<String>();
-			cbConta.setBounds(290,30,100,25);
-			panel.add(cbConta);
 
 			// Criando Tabela
 			tableModel = new DefaultTableModel();
 			tableModel.addColumn("Conta");
 			tableModel.addColumn("Data");
 			tableModel.addColumn("Valor");
-			tableModel.addColumn("Total");
-			tableModel.addColumn("TotalDeb");
-			tableModel.addColumn("Balanco");
 
 			table = new JTable(tableModel);
 			scroll = new JScrollPane(table);
@@ -70,28 +64,28 @@ package views;
 			
 			
 			// Totais rótulos e textfields
-			lbTotal = new JLabel("Total");
-			lbTotal.setBounds(10,330,40,20);
+			lbTotal = new JLabel("Total:");
+			lbTotal.setBounds(10,335,60,20);
 			panel.add(lbTotal);
 			
 			tfTotal = new JTextField();
-			tfTotal.setBounds(50,330,40,25);
+			tfTotal.setBounds(50,335,60,25);
 			panel.add(tfTotal);
 			
-			lbTotalDeb = new JLabel("Total Debito");
-			lbTotalDeb.setBounds(90,330,40,20);
+			lbTotalDeb = new JLabel("Déb:");
+			lbTotalDeb.setBounds(116,335,60,20);
 			panel.add(lbTotalDeb);
 			
 			tfTotalDeb = new JTextField();
-			tfTotalDeb.setBounds(130,330,40,25);
+			tfTotalDeb.setBounds(145,335,60,25);
 			panel.add(tfTotalDeb);
 			
-			lbBalanco = new JLabel("Balanco");
-			lbBalanco.setBounds(170,330,40,20);
+			lbBalanco = new JLabel("Balanco:");
+			lbBalanco.setBounds(210,335,60,20);
 			panel.add(lbBalanco);
 			
 			tfBalanco = new JTextField();
-			tfBalanco.setBounds(210,330,40,25);
+			tfBalanco.setBounds(265,335,80,25);
 			panel.add(tfBalanco);
 
 			// Criar os botões
@@ -102,17 +96,17 @@ package views;
 
 
 			jbDel = new JButton("Del");
-			jbDel.setBounds(278,330,59,30);
+			jbDel.setBounds(350,330,59,30);
 			jbDel.addActionListener(this);
 			panel.add(jbDel);
 
 			jbCancelar = new JButton("Cancelar");
-			jbCancelar.setBounds(328,330,120,30);
+			jbCancelar.setBounds(411,330,85,30);
 			jbCancelar.addActionListener(this);
 			panel.add(jbCancelar);
 
 			jbSalvar = new JButton("Salvar");
-			jbSalvar.setBounds(448,330,120,30);
+			jbSalvar.setBounds(498,330,70,30);
 			jbSalvar.addActionListener(this);
 			panel.add(jbSalvar);
 
