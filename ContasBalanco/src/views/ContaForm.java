@@ -60,7 +60,6 @@ public class ContaForm extends JDialog implements ActionListener{
 		// Criando Tabela
 		tableModel = new DefaultTableModel();
 		tableModel.addColumn("CodConta");
-		codConta.setBounds(116,335,60,20);
 		tableModel.addColumn("Tipo");
 		tableModel.addColumn("Categoria");
 		tableModel.addColumn("Descrição");
